@@ -1,0 +1,14 @@
+<div mat-dialog-content class="dialog-content">
+  <div class="title">Новая задача</div>
+  <hr>
+  <mat-form-field appearance="outline">
+    <mat-label>Название задачи...</mat-label>
+    <input matInput   [(ngModel)]="data.todo" placeholder="Название задачи...">
+    <mat-label>Категория</mat-label>
+    <input matInput   [(ngModel)]="data.todo" placeholder="Категория" style="margin-top: 20px;">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-flat-button (click)="onNoClick()" style="background-color: grey;">Отмена</button>
+  <button mat-flat-button [mat-dialog-close]="data.todo" color="accent" cdkFocusInitial>OK</button>
+</div>

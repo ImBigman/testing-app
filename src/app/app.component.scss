@@ -1,0 +1,66 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}
+
+.mat-toolbar-row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #3aafda;
+  color: white;
+  font-weight: 600;
+
+    h1 {
+      text-align: center;
+      flex: 1;
+    }
+}
+
+
+.container {
+  margin: 82px auto 32px;
+  max-width: 1350px;
+}
+
+a,
+a:visited,
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+.mat-icon-button {
+  margin-right: 30px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+
+  .mat-icon {
+    font-size: 36px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+  }
+}
+
+input.ng-touched.ng-invalid{
+  border-color: red;
+ }

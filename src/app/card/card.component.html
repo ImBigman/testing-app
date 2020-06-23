@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="column" *ngFor="let card of cards">
+    <mat-card class="my-card" >
+      <mat-card-header>
+        <mat-card-title><span>{{card.title}} </span></mat-card-title>
+      </mat-card-header>
+      <hr>
+      <mat-card-content>
+        <p style="padding: 12px;" *ngFor="let todo of card.todos">
+          <mat-checkbox [checked]= "todo.isCompleted" (change)="finishTodo(this.card.id, this.todo.id)" >
+            <label style="margin-left: 20px;" [ngStyle]="{
+              'text-decoration': todo.isCompleted ? 'line-through': 'none' }">{{todo.text}}</label>
+          </mat-checkbox>
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
