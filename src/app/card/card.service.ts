@@ -7,9 +7,9 @@ import { plainToClass } from "class-transformer";
 
 @Injectable()
 export class CardService {
-  private projectsUrl = 'http://localhost:3000/projects';
-  private todosUrl = 'http://localhost:3000/todos';
-  private completeUrl = 'http://localhost:3000/projects/';
+  private projectsUrl = 'https://testing-task.herokuapp.com/projects';
+  private todosUrl = 'https://testing-task.herokuapp.com/todos';
+  private completeUrl = 'https://testing-task.herokuapp.com/projects/';
 
   constructor(private http: HttpClient){}
 
