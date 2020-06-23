@@ -20,10 +20,10 @@ export class CardService {
     //   map(data => plainToClass(Card, data as Object[])))
   }
 
-  createTodo(todo: Todo):  Observable<Todo>{
+  createTodo(text:string, id:string):  Observable<Todo>{
     let headers = new HttpHeaders({'Content-Type':'application/json'})
 
-    return this.http.post(this.todosUrl,headers)
+    return this.http.post((this.todosUrl + "/?todo[text]=" + text + "&todo[project_id]=" + id),headers)
   }
 
   completeTodo(num1:number,num2:number):  Observable<Todo>{
